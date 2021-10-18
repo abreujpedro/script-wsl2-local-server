@@ -1,5 +1,5 @@
 
-$remoteport = wsl -d Ubuntu -e sh -c "ip addr show eth0 | grep 'inet\b' | awk '{print $2}' | cut -d/ -f1";
+$remoteport = wsl -d Ubuntu -e sh -c "ip addr show eth0 | grep 'inet\b' | awk '{print $2}' | cut -d/ -f1"; #Change "Ubuntu" to your OS, (wsl --list) to see OS
 $found = $remoteport -match '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}';
 
 if( $found ){
